@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:schoolproject/home_screen.dart';
 import 'package:schoolproject/register_product_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
   @override
-  _RegisterScreenState createState() => _RegisterScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
@@ -33,17 +33,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Register')),
+      appBar: AppBar(
+        title: Text('Register', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.green[700], // Green theme for consistency
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
             children: [
               // Name Field
               TextFormField(
-                decoration: InputDecoration(labelText: 'Name'),
+                decoration: InputDecoration(
+                  labelText: 'Name',
+                  border: OutlineInputBorder(),
+                ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your name';
@@ -58,7 +63,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
               // Phone Number Field
               TextFormField(
-                decoration: InputDecoration(labelText: 'Phone Number'),
+                decoration: InputDecoration(
+                  labelText: 'Phone Number',
+                  border: OutlineInputBorder(),
+                ),
                 keyboardType: TextInputType.phone,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -75,7 +83,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               // Country Dropdown
               DropdownButtonFormField<String>(
                 value: _selectedCountry,
-                decoration: InputDecoration(labelText: 'Country'),
+                decoration: InputDecoration(
+                  labelText: 'Country',
+                  border: OutlineInputBorder(),
+                ),
                 onChanged: (newCountry) {
                   setState(() {
                     _selectedCountry = newCountry!;
@@ -95,7 +106,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               // City Dropdown based on selected country
               DropdownButtonFormField<String>(
                 value: _selectedCity.isEmpty ? null : _selectedCity,
-                decoration: InputDecoration(labelText: 'City'),
+                decoration: InputDecoration(
+                  labelText: 'City',
+                  border: OutlineInputBorder(),
+                ),
                 onChanged: (newCity) {
                   setState(() {
                     _selectedCity = newCity!;
@@ -115,7 +129,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Center(
                 child: ElevatedButton(
                   onPressed: _submitForm,
-                  child: Text('Register'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green[700], // Green button theme
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                  ),
+                  child: Text(
+                    'Register',
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
                 ),
               ),
             ],
