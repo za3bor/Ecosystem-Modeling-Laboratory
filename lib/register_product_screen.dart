@@ -31,9 +31,11 @@ class _RegisterProductScreenState extends State<RegisterProductScreen> {
   // Function to handle form submission
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-      Navigator.push(
+      // Navigate to the home screen after successful registration
+      Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (context) => const HomeScreen()),
+        (Route<dynamic> route) => false,
       );
     }
   }
@@ -41,7 +43,10 @@ class _RegisterProductScreenState extends State<RegisterProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Register Products')),
+      appBar: AppBar(
+        title: Text('Register Products'),
+        backgroundColor: Colors.green[700], // Green theme for consistency
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -49,6 +54,17 @@ class _RegisterProductScreenState extends State<RegisterProductScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // Title Text
+              Text(
+                'Select Products to Register:',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green[800],
+                ),
+              ),
+              SizedBox(height: 20),
+
               // MultiSelect Dropdown for selecting multiple products
               MultiSelectDialogField(
                 items:
@@ -80,7 +96,14 @@ class _RegisterProductScreenState extends State<RegisterProductScreen> {
               Center(
                 child: ElevatedButton(
                   onPressed: _submitForm,
-                  child: Text('Register Products'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green[700], // Green button theme
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                  ),
+                  child: Text(
+                    'Register Products',
+                    style: TextStyle(fontSize: 16),
+                  ),
                 ),
               ),
             ],
