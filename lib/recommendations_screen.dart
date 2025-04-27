@@ -14,37 +14,39 @@ class RecommendationsScreen extends StatelessWidget {
 
         backgroundColor: Colors.green[700], // Green theme to match the app
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Title section for the recommendations
-            Text(
-              'Farming Tips Based on Weather:',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.green[800], // Green title color
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Title section for the recommendations
+              Text(
+                'Farming Tips Based on your location\'s Weather:',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green[800], // Green title color
+                ),
               ),
-            ),
-            SizedBox(height: 30),
-
-            // Recommendation 1
-            _buildRecommendationCard(
-              context,
-              'Water your crops early in the morning to avoid evaporation during the day.',
-              'Recommended for: All crops in hot climates',
-            ),
-            SizedBox(height: 20),
-
-            // Recommendation 2
-            _buildRecommendationCard(
-              context,
-              'Protect crops from frost by covering them at night during low temperatures.',
-              'Recommended for: Frost-sensitive crops like tomatoes and peppers',
-            ),
-          ],
+              SizedBox(height: 30),
+        
+              // Recommendation 1
+              _buildRecommendationCard(
+                context,
+                'Water your crops early in the morning to avoid evaporation during the day.',
+                'Recommended for: All crops in hot climates',
+              ),
+              SizedBox(height: 20),
+        
+              // Recommendation 2
+              _buildRecommendationCard(
+                context,
+                'Protect crops from frost by covering them at night during low temperatures.',
+                'Recommended for: Frost-sensitive crops like tomatoes and peppers',
+              ),
+            ],
+          ),
         ),
       ),
     );
