@@ -7,11 +7,11 @@ class ForecastImpactScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-<<<<<<< HEAD
-        title: Text('Forecast Impact on Crops', style: TextStyle(color: Colors.white),),
-=======
-        title: Text('Forecast Impact on Crops'),
->>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
+        title: Text(
+          'Forecast Impact on Crops',
+          style: TextStyle(color: Colors.white),
+        ),
+
         backgroundColor: Colors.blue[700], // Blue color representing weather
       ),
       body: Padding(
@@ -44,7 +44,10 @@ class ForecastImpactScreen extends StatelessWidget {
                     // Impact description
                     Text(
                       'Impact 1: "Temperatures above 30°C can lead to heat stress in crops."',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     SizedBox(height: 10),
                     // Recommended action
@@ -72,7 +75,10 @@ class ForecastImpactScreen extends StatelessWidget {
                     // Impact description
                     Text(
                       'Impact 2: "Excessive rainfall can cause soil erosion and crop rot."',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     SizedBox(height: 10),
                     // Recommended action
@@ -102,11 +108,7 @@ class ForecastImpactScreen extends StatelessWidget {
                 ),
                 child: Text(
                   'Add More Impacts',
-<<<<<<< HEAD
                   style: TextStyle(fontSize: 16, color: Colors.white),
-=======
-                  style: TextStyle(fontSize: 16),
->>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
                 ),
               ),
             ),

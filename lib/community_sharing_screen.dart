@@ -7,12 +7,10 @@ class CommunitySharingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-<<<<<<< HEAD
-        title: Text('Community Sharing', style: TextStyle(color: Colors.white),),
-=======
-        title: Text('Community Sharing'),
->>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
-        backgroundColor: Colors.green[700], // Green color for a community-oriented theme
+        title: Text('Community Sharing', style: TextStyle(color: Colors.white)),
+
+        backgroundColor:
+            Colors.green[700], // Green color for a community-oriented theme
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -44,7 +42,10 @@ class CommunitySharingScreen extends StatelessWidget {
                     // Post Content
                     Text(
                       'Post 1: "Best practices for watering during hot weather!"',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     SizedBox(height: 10),
                     Text(
@@ -71,7 +72,10 @@ class CommunitySharingScreen extends StatelessWidget {
                     // Post Content
                     Text(
                       'Post 2: "How to prevent crop damage from hailstorms!"',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     SizedBox(height: 10),
                     Text(
@@ -100,11 +104,7 @@ class CommunitySharingScreen extends StatelessWidget {
                 ),
                 child: Text(
                   'Add More Posts',
-<<<<<<< HEAD
-                  style: TextStyle(fontSize: 16,color: Colors.white),
-=======
-                  style: TextStyle(fontSize: 16),
->>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
+                  style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
               ),
             ),

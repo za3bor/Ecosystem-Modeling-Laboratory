@@ -12,11 +12,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-<<<<<<< HEAD
-        title: Text('AgriTemp Home', style: TextStyle(color: Colors.white),),
-=======
-        title: Text('AgriTemp Home'),
->>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
+        title: Text('AgriTemp Home', style: TextStyle(color: Colors.white)),
+
         backgroundColor: Colors.green[700], // Green to match agricultural theme
       ),
       body: Padding(
@@ -81,7 +78,11 @@ class HomeScreen extends StatelessWidget {
   }
 
   // Helper method to build the buttons
-  ElevatedButton _buildNavigationButton(BuildContext context, String label, Widget screen) {
+  ElevatedButton _buildNavigationButton(
+    BuildContext context,
+    String label,
+    Widget screen,
+  ) {
     return ElevatedButton(
       onPressed: () {
         Navigator.push(
@@ -92,14 +93,9 @@ class HomeScreen extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.green[600], // Matching green theme
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
-      child: Text(
-        label,
-        style: TextStyle(fontSize: 16, color: Colors.white),
-      ),
+      child: Text(label, style: TextStyle(fontSize: 16, color: Colors.white)),
     );
   }
 }
