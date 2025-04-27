@@ -12,7 +12,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: Text('AgriTemp Home', style: TextStyle(color: Colors.white),),
+=======
+        title: Text('AgriTemp Home'),
+>>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
         backgroundColor: Colors.green[700], // Green to match agricultural theme
       ),
       body: Padding(

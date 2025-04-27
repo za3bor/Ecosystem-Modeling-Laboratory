@@ -44,7 +44,11 @@ class _RegisterProductScreenState extends State<RegisterProductScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: Text('Register Products', style: TextStyle(color: Colors.white),),
+=======
+        title: Text('Register Products'),
+>>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
         backgroundColor: Colors.green[700], // Green theme for consistency
       ),
       body: Padding(

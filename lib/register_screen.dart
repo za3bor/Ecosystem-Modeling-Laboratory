@@ -34,7 +34,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: Text('Register', style: TextStyle(color: Colors.white)),
+=======
+        title: Text('Register'),
+>>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
         backgroundColor: Colors.green[700], // Green theme for consistency
       ),
       body: Padding(
@@ -93,13 +97,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     _selectedCity = ''; // Reset city when country changes
                   });
                 },
-                items:
-                    _countries.map((country) {
-                      return DropdownMenuItem<String>(
-                        value: country,
-                        child: Text(country),
-                      );
-                    }).toList(),
+                items: _countries.map((country) {
+                  return DropdownMenuItem<String>(
+                    value: country,
+                    child: Text(country),
+                  );
+                }).toList(),
               ),
               SizedBox(height: 20),
 
@@ -115,13 +118,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     _selectedCity = newCity!;
                   });
                 },
-                items:
-                    _countryCities[_selectedCountry]!.map((city) {
-                      return DropdownMenuItem<String>(
-                        value: city,
-                        child: Text(city),
-                      );
-                    }).toList(),
+                items: _countryCities[_selectedCountry]!.map((city) {
+                  return DropdownMenuItem<String>(
+                    value: city,
+                    child: Text(city),
+                  );
+                }).toList(),
               ),
               SizedBox(height: 40),
 
@@ -135,7 +137,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   child: Text(
                     'Register',
+<<<<<<< HEAD
                     style: TextStyle(fontSize: 16, color: Colors.white),
+=======
+                    style: TextStyle(fontSize: 16),
+>>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
                   ),
                 ),
               ),

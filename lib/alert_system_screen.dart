@@ -7,7 +7,11 @@ class AlertSystemScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: Text('Alert System', style: TextStyle(color: Colors.white)),
+=======
+        title: Text('Alert System'),
+>>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
         backgroundColor: Colors.red[700], // Red background for urgency
       ),
       body: Padding(
@@ -53,10 +57,14 @@ class AlertSystemScreen extends StatelessWidget {
                           SizedBox(height: 10),
                           Text(
                             'Issued by: National Weather Service',
+<<<<<<< HEAD
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.grey[600],
                             ),
+=======
+                            style: TextStyle(fontSize: 16, color: Colors.grey[600]),
+>>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
                           ),
                         ],
                       ),
@@ -94,10 +102,14 @@ class AlertSystemScreen extends StatelessWidget {
                           SizedBox(height: 10),
                           Text(
                             'Issued by: Local Agriculture Authority',
+<<<<<<< HEAD
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.grey[600],
                             ),
+=======
+                            style: TextStyle(fontSize: 16, color: Colors.grey[600]),
+>>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
                           ),
                         ],
                       ),

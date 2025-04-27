@@ -7,7 +7,11 @@ class RecommendationsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: Text('Farming Recommendations', style: TextStyle(color: Colors.white),),
+=======
+        title: Text('Farming Recommendations'),
+>>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
         backgroundColor: Colors.green[700], // Green theme to match the app
       ),
       body: Padding(

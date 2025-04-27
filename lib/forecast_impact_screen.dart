@@ -7,7 +7,11 @@ class ForecastImpactScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: Text('Forecast Impact on Crops', style: TextStyle(color: Colors.white),),
+=======
+        title: Text('Forecast Impact on Crops'),
+>>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
         backgroundColor: Colors.blue[700], // Blue color representing weather
       ),
       body: Padding(
@@ -98,7 +102,11 @@ class ForecastImpactScreen extends StatelessWidget {
                 ),
                 child: Text(
                   'Add More Impacts',
+<<<<<<< HEAD
                   style: TextStyle(fontSize: 16, color: Colors.white),
+=======
+                  style: TextStyle(fontSize: 16),
+>>>>>>> 221e0117a934784dbc30b3c0021c108bf0570054
                 ),
               ),
             ),
