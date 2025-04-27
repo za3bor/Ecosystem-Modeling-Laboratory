@@ -4,6 +4,7 @@ import 'package:schoolproject/community_sharing_screen.dart';
 import 'package:schoolproject/forecast_impact_screen.dart';
 import 'package:schoolproject/recommendations_screen.dart';
 import 'package:schoolproject/register_product_screen.dart';
+import 'package:schoolproject/register_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -70,6 +71,13 @@ class HomeScreen extends StatelessWidget {
               context,
               'Register New Products',
               RegisterProductScreen(),
+            ),
+
+            // Delete accountn
+            _buildNavigationButton(
+              context,
+              'Delete your account',
+              RegisterScreen(),
             ),
           ],
         ),
